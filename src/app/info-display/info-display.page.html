@@ -1,0 +1,45 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-grid>
+            <ion-row>
+                <ion-button (click)="backButton()">
+                    <ion-icon name="arrow-back-outline"></ion-icon>
+                </ion-button>
+                <ion-title>Info page</ion-title>
+            </ion-row>
+        </ion-grid>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content>
+    <ion-card>
+        <img src="{{data?.image || urlNoImg}}" class="img-test">
+        <ion-card-header>
+            <!--all-->
+            <ion-card-subtitle *ngIf="dataName">Name</ion-card-subtitle>
+            <ion-card-title *ngIf="dataName">{{data?.name}}</ion-card-title>
+            <!--character-->
+            <ion-card-subtitle *ngIf="dataGender">Gender</ion-card-subtitle>
+            <ion-card-title *ngIf="dataGender">{{data?.gender}}</ion-card-title>
+            <ion-card-subtitle *ngIf="dataStatus">Status</ion-card-subtitle>
+            <ion-card-title *ngIf="dataStatus">{{data?.status}}</ion-card-title>
+            <ion-card-subtitle *ngIf="dataSpecies">Species</ion-card-subtitle>
+            <ion-card-title *ngIf="dataSpecies">{{data?.species}}</ion-card-title>
+            <ion-card-subtitle *ngIf="dataOrigin">Origin</ion-card-subtitle>
+            <ion-card-title *ngIf="dataOrigin">{{data?.origin.name}}</ion-card-title>
+            <ion-card-subtitle *ngIf="dataLocation">Location</ion-card-subtitle>
+            <ion-card-title *ngIf="dataLocation">{{data?.location.name}}</ion-card-title>
+            <!--location-->
+            <ion-card-subtitle *ngIf="dataType">Type</ion-card-subtitle>
+            <ion-card-title *ngIf="dataType">{{data?.type || noneText}}</ion-card-title>
+            <ion-card-subtitle *ngIf="dataDimension">Dimension</ion-card-subtitle>
+            <ion-card-title *ngIf="dataDimension">{{data?.dimension}}</ion-card-title>
+            <!--episode-->
+            <ion-card-subtitle *ngIf="dataAirDate">Air Date</ion-card-subtitle>
+            <ion-card-title *ngIf="dataAirDate">{{data?.air_date}}</ion-card-title>
+            <ion-card-subtitle *ngIf="dataEpisode">Episode</ion-card-subtitle>
+            <ion-card-title *ngIf="dataEpisode">{{data?.episode}}</ion-card-title>
+        </ion-card-header>
+    </ion-card>
+
+</ion-content>
