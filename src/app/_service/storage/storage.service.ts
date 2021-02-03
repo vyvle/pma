@@ -32,8 +32,7 @@ export class StorageService {
 
     getLastData() {
         this.storage.get('data').then((val) => {
-            if(val)
-            {
+            if (val) {
                 this.historyArray = JSON.parse(val);
             }
         });

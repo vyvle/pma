@@ -25,7 +25,8 @@ export class Tab1Page {
             this.dataObject = data.results;
         });
     }
-    public getData(data:any){
+
+    public getData(data: any) {
         this.storageService.updateLastData(data);
     }
 

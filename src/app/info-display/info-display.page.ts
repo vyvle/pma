@@ -27,7 +27,7 @@ export class InfoDisplayPage {
 
     urlNoImg: string = 'https://rickandmortyapi.com/api/character/avatar/19.jpeg';
 
-    constructor(private storageService: StorageService, private location: Location, private route: ActivatedRoute) {
+    constructor(private storageService: StorageService, private location: Location) {
     }
 
     ionViewWillEnter() {
@@ -44,7 +44,6 @@ export class InfoDisplayPage {
         this.dataSpecies = JSON.stringify(this.data?.species);
         if (this.data.origin?.name) {
             this.dataOrigin = JSON.stringify(this.data.origin?.name);
-
         }
         this.dataLocation = JSON.stringify(this.data.location?.name);
         //location
